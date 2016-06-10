@@ -1951,8 +1951,9 @@ class Parser(object):
 
     @parse_debug
     def parse_literal(self):
+        token = self.tokens.look()
         literal = self.accept(Literal)
-        return tree.Literal(value=literal)
+        return tree.Literal(value=literal, _position=token.position)
 
     @parse_debug
     def parse_par_expression(self):

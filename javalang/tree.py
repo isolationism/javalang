@@ -210,7 +210,7 @@ class Primary(Expression):
     attrs = ("prefix_operations", "postfix_operations", "qualifier", "selectors")
 
 class Literal(Primary):
-    attrs = ("value",)
+    attrs = ("value", "_position")
 
 class This(Primary):
     attrs = ()
